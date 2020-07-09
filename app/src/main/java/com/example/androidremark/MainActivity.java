@@ -46,7 +46,10 @@ import com.example.androidremark.ui3.group.BaseGroupRecyclerActivity;
 import com.example.androidremark.ui3.light.ColorLightActivity;
 import com.example.androidremark.ui3.pwd.PwdInputActivity;
 import com.example.androidremark.ui3.rv.VerticalTabRvActivity;
+import com.example.androidremark.ui3.tantan.TanTanRvActivity;
 import com.example.androidremark.view.RounProgressActivity;
+import com.example.androidremark.ui3.dashboard.DashBoardActivity;
+import com.example.androidremark.watermask.WatermarkActivity;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -109,7 +112,7 @@ public class MainActivity extends BaseActivity implements MainMenuItemListener {
                 {"动画", "基本动画", "分组recycler", "eventbus", "垂直rv"},
                 {"recycler", "多级展开", "BaseRecycler", "粘性reclcler", "时光轴recycler"},
                 {"曲线", "sin函数", "折线图", "树状图", ""},
-                {"自定义View2", "密码输入框", "", "", ""},
+                {"自定义View2", "密码输入框", "水印", "探探卡片滑动", "仪表盘"},
         };
         for (String[] anArray : array) {
             list.add(new MainMenuNameBean(anArray[0], anArray[1], anArray[2], anArray[3], anArray[4]));
@@ -132,7 +135,7 @@ public class MainActivity extends BaseActivity implements MainMenuItemListener {
                     case R.id.tv_view_one:
                         launchActivity(ChartActivity.class, null);
                         break;
-                    case R.id.tv_view_two:
+                    case R.id.tv_view_two://支付完成
                         launchActivity(ALiPayActivity.class, null);
                         break;
                     case R.id.tv_view_three:
@@ -347,11 +350,14 @@ public class MainActivity extends BaseActivity implements MainMenuItemListener {
                     case R.id.tv_view_one://密码输入框
                         launchActivity(PwdInputActivity.class, null);
                         break;
-                    case R.id.tv_view_two:
+                    case R.id.tv_view_two://水印
+                        launchActivity(WatermarkActivity.class, null);
                         break;
-                    case R.id.tv_view_three:
+                    case R.id.tv_view_three://探探卡片滑动
+                        launchActivity(TanTanRvActivity.class, null);
                         break;
                     case R.id.tv_view_four:
+                        launchActivity(DashBoardActivity.class,null);
                         break;
                 }
                 break;
